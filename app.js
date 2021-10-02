@@ -2,9 +2,8 @@ const express = require("express");
 const mongo = require("./mongo");
 const hotelsRoutes = require("./routes/hotels.routes");
 const customersRoutes = require("./routes/customers.routes");
-
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 async function loadApp() {
   try {
