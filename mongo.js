@@ -1,6 +1,8 @@
 const { MongoClient } = require("mongodb");
+const dotenv = require("dotenv").config();
 
-const url = "mongodb://localhost:27017";
+//const url = "mongodb://localhost:27017";
+const url = process.env.MONGODB_URL;
 const client = new MongoClient(url);
 
 module.exports = {
